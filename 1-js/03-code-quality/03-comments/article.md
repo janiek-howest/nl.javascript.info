@@ -1,14 +1,14 @@
-# Comments
+# Commentaar
 
-As we know from the chapter <info:structure>, comments can be single-line: starting with `//` and multiline: `/* ... */`.
+Zoals we weten van het hoofdstuk <info:structure>, commentaar kan geschreven woreden op een enkele lijn: startend met `//` en over verschillende lijnen: `/* ... */`.
 
-We normally use them to describe how and why the code works.
+We gebruiken dit voornamelijk om te beschrijven hoe en waarom de code werkt.
 
-At first sight, commenting might be obvious, but novices in programming often use them wrongly.
+Op het eerste gezicht, lijkt commentaar vanzelfsprekend, maar beginnende ontwikkelaars gebruiken ze dikwijls verkeerd.
 
-## Bad comments
+## Slechte commentaar
 
-Novices tend to use comments to explain "what is going on in the code". Like this:
+Beginners gebruiken commentaar om te verklaren "wat er juist gebeurd in de code". Zoals dit:
 
 ```js
 // This code will do this thing (...) and that thing (...)
@@ -18,13 +18,13 @@ complex;
 code;
 ```
 
-But in good code, the amount of such "explanatory" comments should be minimal. Seriously, the code should be easy to understand without them.
+Maar in degelijke code, moet het aantal "verklarende" commentaar zo weinig mogelijk zijn. Code moet zonder commentaar zo gemakkelijk mogelijk verstaanbaar zijn.
 
-There's a great rule about that: "if the code is so unclear that it requires a comment, then maybe it should be rewritten instead".
+Er is een zeer goede regel daarover: "Als de code zo slecht is dat het commentaar nodig heeft, is het beter om de code te herschrijven".
 
-### Recipe: factor out functions
+### Recept: In functies wegwerken
 
-Sometimes it's beneficial to replace a code piece with a function, like here:
+Soms komt het ten goede om code te vervangen door een functie, zoals hier:
 
 ```js
 function showPrimes(n) {
@@ -43,7 +43,7 @@ function showPrimes(n) {
 }
 ```
 
-The better variant, with a factored out function `isPrime`:
+Dit kan beter, door dit weg te werken in een functie `isPrime`:
 
 
 ```js
@@ -65,11 +65,11 @@ function isPrime(n) {
 }
 ```
 
-Now we can understand the code easily. The function itself becomes the comment. Such code is called *self-descriptive*.
+Nu verstaan we de code veel beter. De commentaar wordt hierdoor weggewerkt door de functie. De code wordt hierdoor *zelf-beschrijvend*.
 
-### Recipe: create functions
+### Recept: Toevoegende functies
 
-And if we have a long "code sheet" like this:
+En als we lange "code" hebben zoals hieronder:
 
 ```js
 // here we add whiskey
@@ -90,7 +90,7 @@ for(let t = 0; t < 3; t++) {
 // ...
 ```
 
-Then it might be a better variant to refactor it into functions like:
+Dan kunnen we dit beter herschrijven (refactoren) in functions zoals:
 
 ```js
 addWhiskey(glass);
@@ -111,21 +111,19 @@ function addJuice(container) {
 }
 ```
 
-Once again, functions themselves tell what's going on. There's nothing to comment. And also the code structure is better when split. It's clear what every function does, what it takes and what it returns.
+Nogmaals, de functies zelf vertellen al wat er gebeurt. Commentaar wordt daardoor overbodig. De structuur van de code wordt beter wanneer deze wordt gesplitst. Het is duidelijk wat elke functie doet, welke parameters er nodig zijn en wat het teruggeeft.
 
-In reality, we can't totally avoid "explanatory" comments. There are complex algorithms. And there are smart "tweaks" for purposes of optimization. But generally we should try to keep the code simple and self-descriptive.
+In de praktijk, kunnen we "verklarende" commentaar niet altijd vermijden. Er bestaan complexe algoritmes. En er zijn slimme "truckjes" om bepaalde zaken te optimaliseren. Maar algemeen moeten we proberen om onze code zo simpel mogelijk te houden en zelf-beschrijvend.
 
-## Good comments
+## Goede commentaar
 
-So, explanatory comments are usually bad. Which comments are good?
+Dus, beschrijvende commentaar is over het algemeeen slecht. Maar welke commentaar is dan wel goed?
 
-Describe the architecture
-: Provide a high-level overview of components, how they interact, what's the control flow in various situations... In short -- the bird's eye view of the code. There's a special language [UML](http://wikipedia.org/wiki/Unified_Modeling_Language) to build high-level architecture diagrams explaining the code. Definitely worth studying.
+Beschrijf de architectuur: Voorzie een overzicht van componenten, hoe deze met elkaar in interactie gaan , hoe de flow in elkaar zit in verschillende situaties... In het kort -- Geef een vogelperspectief van de code. Er bestaat een speciale taal [UML](http://wikipedia.org/wiki/Unified_Modeling_Language) om high-level architecturale diagrammen te maken om code uit te leggen. Zeker de moeite waard om dit te bestuderen.
 
-Document function parameters and usage
-: There's a special syntax [JSDoc](http://en.wikipedia.org/wiki/JSDoc) to document a function: usage, parameters, returned value.
+Documenteer functie parameters en hun gebruik: Er bestaat een speciale syntax [JSDoc](http://en.wikipedia.org/wiki/JSDoc) om een functie te documenteren: gebruik, parameters, teruggegeven waarde.
 
-For instance:
+Bijvoorbeeld:
 ```js
 /**
  * Returns x raised to the n-th power.
@@ -139,11 +137,11 @@ function pow(x, n) {
 }
 ```
 
-Such comments allow us to understand the purpose of the function and use it the right way without looking in its code.
+Deze commentaar laat ons toe te begrijpen wat het doel is van de functie en het te gebruiken op de jusite manier zonder naar de code te gaan kijken.
 
-By the way, many editors like [WebStorm](https://www.jetbrains.com/webstorm/) can understand them as well and use them to provide autocomplete and some automatic code-checking.
+Langs de andere kant, kunnen veel editoren zoals [WebStorm](https://www.jetbrains.com/webstorm/) dit begrijpen en gebruiken om autocomplete te voorzien en automatische code checks toe te passen.
 
-Also, there are tools like [JSDoc 3](https://github.com/jsdoc3/jsdoc) that can generate HTML-documentation from the comments. You can read more information about JSDoc at <http://usejsdoc.org/>.
+Ook zijn er tools zoals [JSDoc 3](https://github.com/jsdoc3/jsdoc) dat HTML-documentatie genereren van de commentaar. Je kan er meer over lezen op <http://usejsdoc.org/>.
 
 Why is the task solved this way?
 : What's written is important. But what's *not* written may be even more important to understand what's going on. Why is the task solved exactly this way? The code gives no answer.
