@@ -141,38 +141,38 @@ Deze commentaar laat ons toe te begrijpen wat het doel is van de functie en het 
 
 Langs de andere kant, kunnen veel editoren zoals [WebStorm](https://www.jetbrains.com/webstorm/) dit begrijpen en gebruiken om autocomplete te voorzien en automatische code checks toe te passen.
 
-Ook zijn er tools zoals [JSDoc 3](https://github.com/jsdoc3/jsdoc) dat HTML-documentatie genereren van de commentaar. Je kan er meer over lezen op <http://usejsdoc.org/>.
+Ook zijn er tools zoals [JSDoc 3](https://github.com/jsdoc3/jsdoc) die HTML-documentatie genereren van de commentaar. Je kan er meer over lezen op <http://usejsdoc.org/>.
 
-Why is the task solved this way?
-: What's written is important. But what's *not* written may be even more important to understand what's going on. Why is the task solved exactly this way? The code gives no answer.
+Waarom is dit op deze manier opgelost?
+: Wat geschreven is, is belangrijk. Maar wat *niet* geschreven is, kan zelf belangrijker zijn om te verstaan wat er aan het gebeuren is. Waarom is de taak op deze manier opgelost? De code geeft geen antwoord.
 
-    If there are many ways to solve the task, why this one? Especially when it's not the most obvious one.
+    Als er meerdere manieren zijn om een opdracht op te lossen, waarom gebruik je deze? Zeker wanneer het niet de meest voordehand liggende is.
 
-    Without such comments the following situation is possible:
-    1. You (or your colleague) open the code written some time ago, and see that it's "suboptimal".
-    2. You think: "How stupid I was then, and how much smarter I'm now", and rewrite using the "more obvious and correct" variant.
-    3. ...The urge to rewrite was good. But in the process you see that the "more obvious" solution is actually lacking. You even dimly remember why, because you already tried it long ago. You revert to the correct variant, but the time was wasted.
+    Zonder zo'n commentaar worden volgende situaties mogelijk:
+    1. Jij (of je collega) openen de code geschreven een tijdje terug, en zien dat het "niet optimaal" geschreven is.
+    2. Jij denkt: "Hoe dom was ik toen, en hoeveel wijzer ben ik nu", en je herschrijft de code met de "meer voor de hand liggende" manier.
+    3. ...De neiging om te herschrijven was goed. Maar in een proces zie je dat de "meer voor de hand liggende" oplossing eigenlijk tekort schiet. Je begint je lichtjes te herinneren waarom, omdat je het vroeger al geprobeerd had. Je keert terug naar de eerste oplossing, maar je hebt tijd verloren.
 
-    Comments that explain the solution are very important. They help to continue development the right way.
+    Commentaar die de oplossing beschrijven zijn zeer belangrijk. Ze helpen om de ontwikkeling in de juist richting verder te zetten.
 
-Any subtle features of the code? Where they are used?
-: If the code has anything subtle and counter-intuitive, it's definitely worth commenting.
+Zijn er speciale features aan de code? Wanneer gebruik je ze?
+: Als de code contra-intuitive zaken bevat, is het zeker interessant om deze te be-commentariëren.
 
-## Summary
+## Samenvatting
 
-An important sign of a good developer is comments: their presence and even their absence.
+Een belangrijk kenmerk van een goede ontwikkelaar is zijn commentaar: de aan- en afwezigheid er van.
 
-Good comments allow us to maintain the code well, come back to it after a delay and use it more effectively.
+Goeie commentaar staan ons toe om code goed te onderhouden, later er op terug te komen en het meer efficiënt te gebruiken.
 
-**Comment this:**
+**Becommentarieer:**
 
-- Overall architecture, high-level view.
-- Function usage.
-- Important solutions, especially when not immediately obvious.
+- Algemene architectuur, high-level overzicht.
+- Gebruik van functies.
+- Belangrijke oplossingen, zeker wanneer deze niet voor de hand liggend zijn.
 
-**Avoid comments:**
+**Vermijd commentaar:**
 
-- That tell "how code works" and "what it does".
-- Put them in only if it's impossible to make the code so simple and self-descriptive that it doesn't require them.
+- Die zegt "hoe de code werkt" en "wat het doet".
+- Doe dit enkel als het onmogelijk is de code eenvoudig en zelf-beschrijvend te maken, dat ze wel nodig zijn.
 
-Comments are also used for auto-documenting tools like JSDoc3: they read them and generate HTML-docs (or docs in another format).
+Commentaar wordt ook gebruikt voor auto-documenteer tools zoals JSDoc3: Deze lezen de code en genereren HTML-documentatie (of documentatie in een ander formaat).
